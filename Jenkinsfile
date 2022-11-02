@@ -31,7 +31,7 @@ pipeline {
             steps {
                 sh '''
                     export ANSIBLE_HOST_KEY_CHECKING=False
-                    ansible-playbook 'C:\ProgramData\Jenkins\.jenkins\workspace\MainProjects\Install-App-Ansible\playbook.yml' \
+                    ansible-playbook playbook.yml \
                     -i ${HOST_LIST} \
                     -e ansible_user=${DEFAULT_ADMIN_USER} \
                     -e ansible_password=${ADMIN_PASSWORD} \
