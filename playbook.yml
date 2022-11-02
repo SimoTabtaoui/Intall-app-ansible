@@ -1,0 +1,14 @@
+- name: Install Docker in RHEL/CentOS/Ubuntu Machine
+  hosts: all
+  become: true
+
+  tasks:
+
+    # check vars
+
+    # Install, configure and start Docker
+    - name: Create a /etc/CrowdStrike/ directory if it does not exist
+      file:
+        path: /etc/CrowdStrike
+        state: directory
+        mode: "0755"
